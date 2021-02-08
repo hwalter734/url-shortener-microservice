@@ -38,8 +38,10 @@ app.use(bodyParser.json());
 
 app.post('/api/shorturl/new', (req, res) => {
   const originalURL = req.body.url;
-  const urlObject = originalURL.replace(/^https?:\/\//, '');
-  dns.lookup(urlObject, (err) => {
+  const REPLACE_REGEX = /^https?:\/\//i;
+  const urlObject = originalURL.replace(REPLACE_REGEX, '');
+  const urlObject2 = urlObject.replace('/', '');
+  dns.lookup(urlObject2, (err, address, family) => {
     if (err) {
       res.json({error: 'invalid url'});
     }
