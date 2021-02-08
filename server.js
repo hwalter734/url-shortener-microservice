@@ -56,7 +56,7 @@ app.post('/api/shorturl/new', (req, res) => {
   fixedURL.save((err, doc) => {
     if (err) return console.error(err);
     console.log("URL shortened successfully!", fixedURL);
-    res.json({original_url: fixedURL.original_url, short_url: fixedURL.short_url, fragment: fixedURL.fragment})
+    res.json({original_url: fixedURL.original_url, short_url: fixedURL.short_url})
   })
 });
 
