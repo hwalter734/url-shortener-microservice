@@ -1,8 +1,11 @@
 {
-  "name": "shorturl",
+  "name": "shorturl-microservice",
   "version": "0.0.3",
-  "description": "API project for freeCodeCamp",
+  "description": "Hans Walter API project for freeCodeCamp",
   "main": "server.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js"
@@ -11,10 +14,24 @@
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongodb": "^3.6.4",
+    "mongoose": "^5.11.15",
+    "shortid": "^2.2.16"
   },
   "license": "MIT",
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "got": "^11.3.0",
+    "nodemon": "^2.0.4",
+    "tape": "^4.7.0"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hwalter734/url-shortener-microservice"
   }
 }
